@@ -38,14 +38,15 @@ Collaborative filtering is commonly used for recommender systems. These techniqu
 
 
 The dataset was split in 80:20, with 80% training and 20% testing sets. The ALS model was built and tuned by changing the following parameters:
-rank: “80” used, which is the number of latent factors used for the model.
-regParam: “0.2” was used, which gave the best model when compared to other learning rates such as 0.1, 0.01, 1 etc.
-maxIter: “20” used, which is the number of iterations a model runs on the training dataset. coldStartStrategy: “drop” - this was used to drop unknown ids absent from training dataset, because it wouldn’t be able to predict the ratings and also increase our cost, which are unsuitable for our model.
-nonnegative: “true” was set as we did not want our rating to go into the negative scale.
-userCol: “reviewer_id” - converted “reviewerID” to integer type suitable for our model.
-itemCol: “product_id” - converted “asin” to integer type suitable for our model.
-ratingCol: “rating” - converted “overall” to float data type suitable for our model.
-predictionCol: “prediction”, the rating prediction column.
+- rank: “80” used, which is the number of latent factors used for the model.
+- regParam: “0.2” was used, which gave the best model when compared to other learning rates such as 0.1, 0.01, 1 etc.
+- maxIter: “20” used, which is the number of iterations a model runs on the training dataset. 
+- coldStartStrategy: “drop” - this was used to drop unknown ids absent from training dataset, because it wouldn’t be able to predict the ratings and also increase our cost, which are unsuitable for our model.
+- nonnegative: “true” was set as we did not want our rating to go into the negative scale.
+- userCol: “reviewer_id” - converted “reviewerID” to integer type suitable for our model.
+- itemCol: “product_id” - converted “asin” to integer type suitable for our model.
+- ratingCol: “rating” - converted “overall” to float data type suitable for our model.
+- predictionCol: “prediction”, the rating prediction column.
 
 - Evaluation of ALS: Train RMSE = 0.9987,  MAE = 0.7905
 
